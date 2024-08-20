@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignement</title>
+    <style>
+          body{
+            background-color:rgb(16, 32, 46);
+            color: rgb(144, 99, 123);
+            
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+// Q # 01
+var number1 = parseFloat(prompt("Enter a positive integer:"));
+if (!isNaN(number1)) {
+    document.write("Q # 01<br>");
+    document.write("Number: " + number1 + "<br><br>");
+    document.write("Round off value: " + Math.round(number1) + "<br><br>");
+    document.write("Floor value: " + Math.floor(number1) + "<br><br>");
+    document.write("Ceil value: " + Math.ceil(number1) + "<br><br>");
+} else {
+    document.write("Q # 01<br>");
+    document.write("Invalid input. Please enter a valid positive integer.<br><br>");
+}
+
+// Q # 02
+var number2 = parseFloat(prompt("Enter a negative floating point number:"));
+if (!isNaN(number2)) {
+    document.write("Q # 02<br>");
+    document.write("Number: " + number2 + "<br><br>");
+    document.write("Round off value: " + Math.round(number2) + "<br><br>");
+    document.write("Floor value: " + Math.floor(number2) + "<br><br>");
+    document.write("Ceil value: " + Math.ceil(number2) + "<br><br>");
+} else {
+    document.write("Q # 02<br>");
+    document.write("Invalid input. Please enter a valid negative floating point number.<br><br>");
+}
+
+// Q # 03
+var number3 = parseFloat(prompt("Enter a number:"));
+if (!isNaN(number3)) {
+    document.write("Q # 03<br>");
+    document.write("The absolute value of " + number3 + " is " + Math.abs(number3) + "<br><br>");
+} else {
+    document.write("Q # 03<br>");
+    document.write("Invalid input. Please enter a valid number.<br><br>");
+}
+
+// Q # 04
+var diceValue = Math.floor(Math.random() * 6) + 1;
+document.write("Q # 04<br>");
+document.write("Dice rolled: " + diceValue + "<br><br>");
+
+// Q # 05
+var coinToss = Math.random() < 0.5 ? "Heads" : "Tails";
+document.write("Q # 05<br>");
+document.write("Coin toss result: " + coinToss + "<br><br>");
+
+// Q # 06
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+document.write("Q # 06<br>");
+document.write("Random number between 1 and 100: " + randomNumber + "<br><br>");
+
+// Q # 07
+var weight = prompt("Enter your weight:");
+var parsedWeight = parseFloat(weight);
+if (!isNaN(parsedWeight)) {
+    document.write("Q # 07<br>");
+    document.write("Your weight is: " + parsedWeight + " kilograms<br><br>");
+} else {
+    document.write("Q # 07<br>");
+    document.write("Invalid input. Please enter a valid weight in kilograms.<br><br>");
+}
+
+// Q # 08
+var secretNumber = Math.floor(Math.random() * 10) + 1;
+var userGuess = parseInt(prompt("Guess the secret number between 1 and 10:"));
+if (!isNaN(userGuess) && userGuess >= 1 && userGuess <= 10) {
+    document.write("Q # 08<br>");
+    if (userGuess === secretNumber) {
+        document.write("Congratulations! You guessed the right number.<br><br>");
+    } else {
+        document.write("Sorry, the correct number was " + secretNumber + "<br><br>");
+    }
+} else {
+    document.write("Q # 08<br>");
+    document.write("Invalid input. Please enter a number between 1 and 10.<br><br>");
+}
+
+
+
+    </script>
+</body>
+</html>

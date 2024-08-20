@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> body{
+        background-color:rgb(16, 32, 46)
+    }</style>
+</head>
+<body>
+    <script>
+        // Q # 01
+        var firstName = prompt("Enter your first name:");
+var lastName = prompt("Enter your last name:");
+var fullName = firstName + " " + lastName;
+alert("Hello, " + fullName + "!");
+
+
+
+// Q # 02
+var mobileModel = prompt("Enter your favorite mobile phone model:");
+var modelLength = mobileModel.length;
+alert("The length of the mobile model name is: " + modelLength);
+  
+// Q # 03
+var word = "Pakistani";
+var index = word.indexOf("n");
+alert("The index of 'n' in 'Pakistani' is: " + index);
+
+
+// Q # 04
+var phrase = "Hello World";
+var lastIndex = phrase.lastIndexOf("l");
+alert("The last index of 'l' in 'Hello World' is: " + lastIndex);
+
+
+// Q # 05
+var character = word.charAt(3);
+alert("The character at the 3rd index in 'Pakistani' is: " + character);
+// Q # 06
+var fullNameConcat = firstName.concat(" ", lastName);
+alert("Hello, " + fullNameConcat + "!");
+
+// Q # 07
+var city = "Hyderabad";
+var newCity = city.replace("Hyder", "Islam");
+alert("The new name is: " + newCity);
+
+// Q # 08
+var message = "Ali and Sami are best friends. They play cricket and football together.";
+var newMessage = message.replace(/and/g, "&");
+alert("Updated message: " + newMessage);
+
+// Q # 09
+var str = "472";
+var num = Number(str);
+alert("Value: " + num + "\nType: " + typeof num);
+
+// Q #10
+var userInput = prompt("Enter a string:");
+var upperCaseInput = userInput.toUpperCase();
+alert("Uppercase: " + upperCaseInput);
+
+// Q # 11
+function toTitleCase(str) {
+    return str.toLowerCase().replace(/\b\w/g, function(txt) {
+        return txt.toUpperCase();
+    });
+}
+var titleCaseInput = toTitleCase(userInput);
+alert("Title Case: " + titleCaseInput);
+
+// Q # 12
+var num = 35.36;
+var numStr = num.toString().replace(".", "");
+alert("Result: " + numStr);
+
+// Q # 13
+var username = prompt("Enter a username:");
+var invalidChars = ["@", ".", ",", "!"];
+
+for (var i = 0; i < invalidChars.length; i++) {
+    if (username.includes(invalidChars[i])) {
+        alert("Please enter a valid username without special symbols [@ . , !]");
+        break;
+    }
+}
+
+// Q # 14
+var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+var searchItem = prompt("Enter an item to search among bakery items:").toLowerCase();
+if (A.indexOf(searchItem) !== -1) {
+    alert(searchItem + " is available in the list.");
+} else {
+    alert(searchItem + " is not available in the list.");
+}
+
+// Q # 15
+var password = prompt("Enter your password:");
+
+if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+} else if (!isNaN(password.charAt(0))) {
+    alert("Password should not start with a number.");
+} else if (!/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) {
+    alert("Password must contain both alphabets and numbers.");
+} else {
+    alert("Password is valid.");
+}
+
+// Q # 16
+var university = "Jinnah Medical and Dental College";
+var array = university.split("");
+alert(array.join("\n"));
+
+// Q # 17
+var lastChar = userInput.charAt(userInput.length - 1);
+alert("The last character is: " + lastChar);
+
+// Q # 18
+var text = "The quick brown fox jumps over the lazy dog";
+var count = (text.match(/the/gi) || []).length;
+alert("The word 'the' occurs " + count + " times in the sentence.");
+
+
+    </script>
+</body>
+</html>
